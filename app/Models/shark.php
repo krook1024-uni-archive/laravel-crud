@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class shark extends Model
 {
     use HasFactory;
+
+    public function image()
+    {
+        return $this->hasOne('App\Models\Image', 'id', 'image_id');
+    }
 }

@@ -21,6 +21,17 @@
       </list>
     </option>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="laravel-crud.test" id="0ba1cf10-8e13-46a6-b3d0-2b36a130b129" name="laravel-crud.test" port="443" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/home/vagrant/laravel-crud" />
+          <mapping local-root="$PROJECT_DIR$/public" remote-root="/home/vagrant/laravel-crud/public" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
@@ -131,6 +142,9 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
     </include_path>
   </component>
   <component name="ProjectId" id="1i2aiB6YADd7KFNyB9rXC2fSTEa" />
@@ -149,7 +163,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -173,7 +187,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601108266455</updated>
       <workItem from="1601108268835" duration="221000" />
-      <workItem from="1601108505460" duration="5768000" />
+      <workItem from="1601108505460" duration="10423000" />
     </task>
     <servers />
   </component>
@@ -181,21 +195,84 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="386" y="81" key="#Servers" timestamp="1601117716166">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="386" y="81" key="#Servers/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601117716166" />
+    <state width="1552" height="390" key="GridCell.Tab.0.bottom" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.0.bottom/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
+    <state width="1552" height="390" key="GridCell.Tab.0.center" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.0.center/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
+    <state width="1552" height="390" key="GridCell.Tab.0.left" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.0.left/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
+    <state width="1552" height="390" key="GridCell.Tab.0.right" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.0.right/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
+    <state width="1552" height="390" key="GridCell.Tab.1.bottom" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.1.bottom/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
+    <state width="1552" height="390" key="GridCell.Tab.1.center" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.1.center/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
+    <state width="1552" height="390" key="GridCell.Tab.1.left" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.1.left/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
+    <state width="1552" height="390" key="GridCell.Tab.1.right" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.1.right/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
+    <state width="1552" height="390" key="GridCell.Tab.2.bottom" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.2.bottom/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
+    <state width="1552" height="390" key="GridCell.Tab.2.center" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.2.center/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
+    <state width="1552" height="390" key="GridCell.Tab.2.left" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.2.left/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
+    <state width="1552" height="390" key="GridCell.Tab.2.right" timestamp="1601119170058">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1552" height="390" key="GridCell.Tab.2.right/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119170058" />
     <state x="613" y="254" width="355" height="139" key="NewPhpFileDialog" timestamp="1601113634170">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="613" y="254" width="355" height="139" key="NewPhpFileDialog/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601113634170" />
-    <state x="292" y="40" key="SettingsEditor" timestamp="1601110053422">
+    <state x="0" y="-16" key="SettingsEditor" timestamp="1601117792780">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="292" y="40" key="SettingsEditor/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601110053422" />
+    <state x="0" y="-16" key="SettingsEditor/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601117792780" />
     <state x="506" y="63" width="588" height="783" key="find.popup" timestamp="1601109041324">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="506" y="63" width="588" height="783" key="find.popup/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601109041324" />
-    <state x="463" y="200" width="672" height="678" key="search.everywhere.popup" timestamp="1601113485233">
+    <state x="463" y="200" width="672" height="678" key="search.everywhere.popup" timestamp="1601119375688">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="463" y="200" width="672" height="678" key="search.everywhere.popup/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601113485233" />
+    <state x="463" y="200" width="672" height="678" key="search.everywhere.popup/1600.0.1920.1080/0.0.1600.900@0.0.1600.900" timestamp="1601119375688" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/sharkController.php</url>
+          <line>57</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

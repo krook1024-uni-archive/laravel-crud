@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Models\shark;
+use \App\Models\Image;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\View;
 use MongoDB\Driver\Session;
@@ -46,7 +48,8 @@ class sharkController extends Controller
         $rules = array(
             'name' => 'required',
             'email' => 'required|email',
-            'shark_level' => 'required|numeric'
+            'shark_level' => 'required|numeric',
+            'shark_image' => 'mimes:jpg,jpeg,bmp,png'
         );
 
         $validator = Validator::make($request->all(), $rules);
@@ -60,7 +63,20 @@ class sharkController extends Controller
             $shark->name = $request->get('name');
             $shark->email = $request->get('email');
             $shark->shark_level = $request->get('shark_level');
+
+            if ($request->file('shark_image')) {
+                $fileName = time() . '_' . $request->file('shark_image')->getClientOriginalName();
+                $filePath = $request->file('shark_image')->storeAs('public', $fileName);
+
+                $image = new Image();
+                $image->name = $fileName;
+                $image->image_path = '/storage/' . $fileName;
+                $image->save();
+                $shark->image_id = $image->id;
+            }
+
             $shark->save();
+
             $request->session()->flash('message', 'Successfully created shark!');
             return Redirect::to('sharks');
         }
